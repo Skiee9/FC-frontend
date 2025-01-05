@@ -6,10 +6,6 @@ Welcome to **Fable and Co**, an innovative and seamless shopping experience that
 1. [Features](#features)
 2. [Technologies Used](#technologies-used)
 3. [Setup Instructions](#setup-instructions)
-4. [API Endpoints](#api-endpoints)
-5. [Contributing](#contributing)
-6. [License](#license)
-7. [Contact](#contact)
 
 ## Features
 
@@ -48,7 +44,7 @@ The Fable and Co app leverages the following technologies:
 
 To get started with **Fable and Co** on your local machine, follow these steps:
 
-### 1. Clone the Repository
+### Clone the Repository
 
 First, clone the repository to your local machine.
 
