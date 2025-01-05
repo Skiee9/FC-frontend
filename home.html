@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Emilys+Candy&family=Leckerli+One&family=Markazi+Text:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/home.css">
+  
+</head>
+<div>
+    <div class="navbar">
+        <div class="navbar-start">
+        <a href="#" id="toggle-form">
+            <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="15px" fill="#FFFFFF">
+            <path d="M480-492.31q-51.75 0-87.87-36.12Q356-564.56 356-616.31q0-51.75 36.13-87.87 36.12-36.13 87.87-36.13 51.75 0 87.87 36.13Q604-668.06 604-616.31q0 51.75-36.13 87.88-36.12 36.12-87.87 36.12ZM212-219.69v-72.93q0-18.38 10.96-35.42 10.96-17.04 30.66-29.5 52.3-30.07 109.94-46.11t116.23-16.04q58.59 0 116.44 16.04 57.85 16.04 110.15 46.11 19.7 11.46 30.66 29T748-292.62v72.93H212Zm52-52h432v-20.93q0-6.33-4.56-11.91-4.57-5.58-12.59-9.47-43.7-26.46-94.42-40.08Q533.7-367.69 480-367.69q-53.7 0-104.43 13.61-50.72 13.62-94.42 40.08-8.07 5.54-12.61 10.61-4.54 5.07-4.54 10.77v20.93Zm216.21-272.62q29.79 0 50.79-21.21t21-51q0-29.79-21.21-50.79t-51-21q-29.79 0-50.79 21.22-21 21.21-21 51 0 29.78 21.21 50.78t51 21Zm-.21-72Zm0 344.62Z"/></svg>
+             Sign In / Register</a> 
+             
+    <div class="hover-content" id="hover-content">
+        <button id="close-button">×</button>
+        <form id="signup-form">
+            <h3>Register</h3>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="password" placeholder="Password" required>
+            <input type="text" placeholder="Address" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <hr>
+        <form id="login-form">
+            <h3>Login</h3>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Log In</button>
+        </form>
+    </div>
+
+        <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="12px" fill="#FFFFFF">
+            <path d="M480.28-485.39q26.64 0 45.33-18.97 18.7-18.97 18.7-45.61t-18.98-45.34Q506.36-614 479.72-614t-45.33 18.97q-18.7 18.98-18.7 45.62 0 26.64 18.98 45.33 18.97 18.69 45.61 18.69ZM480-184.46q114.38-100.08 178.15-195.08 63.77-95 63.77-167.54 0-105.38-68.5-175.34-68.5-69.96-173.42-69.96-104.92 0-173.42 69.96-68.5 69.96-68.5 175.34 0 72.54 63.77 167.54 63.77 95 178.15 195.08Zm0 68.84Q333.03-240.57 259.55-348.21q-73.47-107.64-73.47-198.87 0-122.46 82.07-209.69Q350.23-844 479.5-844q129.27 0 211.85 87.23 82.57 87.23 82.57 209.69 0 91.23-72.96 198.43Q628-241.46 480-115.62Zm0-434.07Z"/></svg>Stores</a> 
+        <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+</div>
+        
+<div class="navbar-end">
+        <ul>
+            <li>  <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="12px" viewBox="0 -960 960 960" width="12px" fill="#FFFFFF"><path d="M276.03-116q-27.03 0-45.53-18.65T212-180.31v-431.38q0-27.01 18.65-45.66Q249.3-676 276.31-676H346v-26q0-56.15 37.42-99.08Q420.85-844 480-844q56.15 0 95.08 38.92Q614-766.15 614-710v34h69.69q27.01 0 45.66 18.65Q748-638.7 748-611.69v431.38q0 27.01-18.66 45.66Q710.68-116 683.65-116H276.03Zm.28-52h407.38q4.62 0 8.46-3.85 3.85-3.84 3.85-8.46v-431.38q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H614v70q0 11.07-7.41 18.53-7.4 7.47-18.38 7.47-10.98 0-18.59-7.47Q562-542.93 562-554v-70H398v70q0 11.07-7.41 18.53-7.4 7.47-18.38 7.47-10.98 0-18.59-7.47Q346-542.93 346-554v-70h-69.69q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46v431.38q0 4.62 3.85 8.46 3.84 3.85 8.46 3.85ZM398-676h164v-34q0-34.32-23.9-58.16Q514.19-792 479.79-792q-34.41 0-58.1 23.84Q398-744.32 398-710v34ZM264-168v-456 456Z"/></svg>
+                Bag</a> </li>
+              <li> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px" fill="#FFFFFF"><path d="m480-170.93-36.15-32.69q-98.46-88.23-162.5-150.57-64.04-62.35-100.58-109.93-36.54-47.57-50.65-86.27Q116-589.08 116-629q0-80.15 55.42-135.58Q226.85-820 307-820q49.38 0 95 23.5t78 67.27q32.38-43.77 78-67.27 45.62-23.5 95-23.5 80.15 0 135.58 55.42Q844-709.15 844-629q0 39.92-13.62 77.61-13.61 37.7-50.15 84.77-36.54 47.08-100.89 110.43Q615-292.85 514.15-201.62L480-170.93Zm0-70.07q93-83.38 153-142.08 60-58.69 95.5-102.19t49.5-77.31q14-33.8 14-66.42 0-59-40-99t-99-40q-35.38 0-66.08 14.88-30.69 14.89-61.15 47.81l-35 41h-21.54l-35-41q-30.85-33.31-62.35-48Q340.38-768 307-768q-58.62 0-98.81 40Q168-688 168-629q0 32.62 13 64.92 13 32.31 47.5 75.31t95 102Q384-327.77 480-241Zm0-264Z"/></svg>
+                 Wishlist</a></li>
+        </ul></div>
+
+
+    </div>
+    <div class="nav">
+       <img src="./assests/F_C-removebg-preview.png" alt="fable and co." style: width="15%">
+       <!-- <button><input type="text" placeholder=""></button> -->
+       <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for brands and products">
+        <!-- <span class="icon">🔍</span> -->
+      </div>
+<div class="free-shipping"><img src="https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/company/5842/applications/6523fa5f41f4eb4c10a1d869/theme/pictures/free/original/c1ecbef918fa__free_shipping_banner.png" alt=""></div>
+
+      
+</div>
+<div class="nav2"> 
+    <div class="dropdown">
+    <a href="#">Women's Fashion</a>
+    <div class="dropdown-content">
+      <div class="mega-menu">
+        <div class="menu-column">
+          <h4>Ethnic Wear</h4>
+          <ul>
+            <li><a href="#">Kurtis & Kurtas</a></li>
+            <li><a href="#">Suits</a></li>
+            <li><a href="#">Sarees</a></li>
+            <li><a href="#">Lehengas</a></li>
+            <li><a href="#">Anarkalis</a></li>
+            <li><a href="#">Bottoms</a></li>
+            <li><a href="#">Blouses & Fabrics</a></li>
+            <li><a href="#">Dupattas</a></li>
+          </ul>
+        </div>
+        <div class="menu-column">
+          <h4>Western Wear</h4>
+          <ul>
+            <li><a href="#">Tops & T-shirts</a></li>
+            <li><a href="#">Dresses</a></li>
+            <li><a href="#">Jeans</a></li>
+            <li><a href="#">Jumpsuits</a></li>
+            <li><a href="#">Shorts</a></li>
+            <li><a href="#">Skirts</a></li>
+            <li><a href="#">Trousers</a></li>
+            <li><a href="#">Jackets & Blazers</a></li>
+            <li><a href="#">Capris</a></li>
+            <li><a href="#">Shrugs</a></li>
+            <li><a href="#">Sweaters</a></li>
+            <li><a href="#">Sweatshirts</a></li>
+          </ul>
+        </div>
+        <div class="menu-column">
+          <h4>Active wear</h4>
+          <ul>
+            <li><a href="#">T-shirts</a></li>
+            <li><a href="#">Shorts</a></li>
+            <li><a href="#">Sets</a></li>
+            <li><a href="#">Jackets</a></li>
+            <li><a href="#">Inner Wear</a></li>
+          </ul>
+        </div>
+        <div class="menu-column">
+            <h4>Lingerie & Lounge Sets</h4>
+            <ul>
+              <li><a href="#">Bras</a></li>
+              <li><a href="#">Panties</a></li>
+              <li><a href="#">Lingerie Sets</a></li>
+              <li><a href="#">Sleepwear</a></li>
+              <li><a href="#">Shapewear</a></li>
+              <li><a href="#">Swimwear</a></li>
+             
+            </ul>
+          </div>
+      </div>
+     
+  </div>
+    </div>
+    <div class="dropdown">
+        <a href="#">Men's fashion</a>
+        <div class="dropdown-content">
+          <div class="mega-menu">
+            
+            <div class="menu-column">
+              <h4>Western Wear</h4>
+              <ul>
+                <li><a href="#"> T-shirts</a></li>
+                
+                <li><a href="#">Jeans</a></li>
+               
+                <li><a href="#">Shorts</a></li>
+               
+                <li><a href="#">Trousers</a></li>
+                <li><a href="#">Jackets & Blazers</a></li>
+                <li><a href="#">Capris</a></li>
+                
+                <li><a href="#">Sweaters</a></li>
+                <li><a href="#">Sweatshirts</a></li>
+              </ul>
+            </div>
+            <div class="menu-column">
+              <h4>Active wear</h4>
+              <ul>
+                <li><a href="#">T-shirts</a></li>
+                <li><a href="#">Shorts</a></li>
+                <li><a href="#">Sets</a></li>
+                <li><a href="#">Jackets</a></li>
+                <li><a href="#">Inner Wear</a></li>
+              </ul>
+            </div>
+            <div class="menu-column">
+                <h4>Footwear</h4>
+                <ul>
+                  <li><a href="#">Casual Footwear</a></li>
+                  <li><a href="#">Boots</a></li>
+                  <li><a href="#">Sneakers</a></li>
+                  <li><a href="#">Flipflops</a></li>
+                  <li><a href="#">Ethnic Footwear</a></li>
+                 
+                 
+                </ul>
+              </div>
+          </div>
+          
+      </div>
+        </div>
+    
+    
+        <div class="dropdown">
+            <a href="#">Kid's fashion</a>
+            <div class="dropdown-content">
+              <div class="mega-menu">
+                <div class="menu-column">
+                  <h4>Girl's Clothing</h4>
+                  <ul>
+                    <li><a href="#">Kurtis & Kurtas</a></li>
+                    <li><a href="#">Suits</a></li>
+                    <li><a href="#">Sarees</a></li>
+                    <li><a href="#">Lehengas</a></li>
+                    <li><a href="#">Anarkalis</a></li>
+                    <li><a href="#">Bottoms</a></li>
+                    <li><a href="#">Blouses & Fabrics</a></li>
+                    <li><a href="#">Dupattas</a></li>
+                  </ul>
+                </div>
+                <div class="menu-column">
+                  <h4>Boy's Clothing</h4>
+                  <ul>
+                    <li><a href="#">T-shirts</a></li>
+                   
+                    <li><a href="#">Jeans</a></li>
+                    
+                    <li><a href="#">Shorts</a></li>
+                   
+                    <li><a href="#">Trousers</a></li>
+                    <li><a href="#">Jackets & Blazers</a></li>
+                    <li><a href="#">Capris</a></li>
+                   
+                    <li><a href="#">Sweaters</a></li>
+                    <li><a href="#">Sweatshirts</a></li>
+                  </ul>
+                </div>
+                <div class="menu-column">
+                  <h4>Footwear</h4>
+                  <ul>
+                    <li><a href="#">Casual Footwear</a></li>
+                    <li><a href="#">Boots</a></li>
+                    <li><a href="#">Sneakers</a></li>
+                    <li><a href="#">Flipflops</a></li>
+                    <li><a href="#">Ethnic Footwear</a></li>
+                    
+                   
+                  </ul>
+                </div>
+          </div>
+            </div>
+        </div>
+  
+            <div class="dropdown">
+                <a href="#">Home & Kitchen</a>
+                <div class="dropdown-content">
+                  <div class="mega-menu">
+                    <div class="menu-column">
+                      <h4>Bedding & Linen</h4>
+                      <ul>
+                        <li><a href="#">Bedsheets</a></li>
+                        <li><a href="#">Bedding Sets</a></li>
+                        <li><a href="#"> Bed Covers</a></li>
+                        <li><a href="#">Pillow & Mattresses</a></li>
+                        <li><a href="#">Pillow Covers</a></li>
+                        <li><a href="#">Comforters</a></li>
+                        <li><a href="#">Quilts & Rajais</a></li>
+                        <li><a href="#">Dohars</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu-column">
+                      <h4>Room Furnishing</h4>
+                      <ul>
+                        <li><a href="#">Cushion Covers</a></li>
+                        <li><a href="#"> Cushion Fillers</a></li>
+                        <li><a href="#"> Rugs & Dhurries</a></li>
+                        <li><a href="#">Doormats</a></li>
+                        <li><a href="#"> Carpets</a></li>
+                        <li><a href="#">Curtains</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu-column">
+                      <h4>kitchen</h4>
+                      <ul>
+                        <li><a href="#">Pots & Pans</a></li>
+                        <li><a href="#"> Tawas & Kadhai</a></li>
+                        <li><a href="#"> Casseroles</a></li>
+                        <li><a href="#">Cookware sets</a></li>
+                        <li><a href="#">Kitchen Tools</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu-column">
+                        <h4>Home Decor</h4>
+                        <ul>
+                          <li><a href="#">Showpieces</a></li>
+                          <li><a href="#">Wall Decor</a></li>
+                          <li><a href="#">Vases</a></li>
+                          <li><a href="#">Photo Frames</a></li>
+                          <li><a href="#">Candles & HOlders</a></li>
+                          <li><a href="#">Lamps</a></li>
+                         
+                        </ul>
+                      </div>
+                  </div>
+                
+              </div>
+                </div>
+    
+
+                <div class="dropdown">
+                    <a href="#">Gadgets</a>
+                    <div class="dropdown-content">
+                      <div class="mega-menu">
+                        <div class="menu-column">
+                          <h4>Audio</h4>
+                          <ul>
+                            <li><a href="#">Headphones</a></li>
+                            <li><a href="#">Wired Earphones</a></li>
+                            <li><a href="#">Headsets</a></li>
+                            <li><a href="#">NEckbands</a></li>
+                            <li><a href="#">TWS Earbuds</a></li>
+                           
+                          </ul>
+                        </div>
+                        <div class="menu-column">
+                          <h4>Speakers</h4>
+                          <ul>
+                            <li><a href="#">Bluetooth Speakers</a></li>
+                            <li><a href="#">Soundbars</a></li>
+                            <li><a href="#">Home Theatre System</a></li>
+                            
+                          </ul>
+                        </div>
+                        <div class="menu-column">
+                          <h4> Smart Gadgets</h4>
+                          <ul>
+                            <li><a href="#">Smart Assistants & FireTV</a></li>
+                            <li><a href="#">Smart Locks & Safes</a></li>
+                            <li><a href="#">Smart Plugs</a></li>
+                            <li><a href="#">Extension Boards</a></li>
+                            <li><a href="#">Torches</a></li>
+                          </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h4>Kitchen Appliances</h4>
+                            <ul>
+                              <li><a href="#">kettle & Coffee makers</a></li>
+                              <li><a href="#">Electirc Choppers</a></li>
+                              <li><a href="#">Mixers & food Processors</a></li>
+                              <li><a href="#">Toasters</a></li>
+                              <li><a href="#">Makers</a></li>
+                              <li><a href="#">Fryer Cookers</a></li>
+                             
+                            </ul>
+                          </div>
+                      </div>
+                    
+                  </div>
+                    </div>
+    
+
+                    <div class="dropdown">
+                        <a href="#">Accessories</a>
+                        <div class="dropdown-content">
+                          <div class="mega-menu">
+                            <div class="menu-column">
+                              <h4>Gold Jewellery</h4>
+                              <ul>
+                                <li><a href="#">Earings</a></li>
+                                <li><a href="#">Chains</a></li>
+                                <li><a href="#">Pendats</a></li>
+                                <li><a href="#">Necklaces</a></li>
+                                <li><a href="#">Bangles & Bracelets</a></li>
+                               </ul>
+                            </div>
+                            <div class="menu-column">
+                              <h4>Diamond Jwellery</h4>
+                              <ul>
+                                <li><a href="#">Earrings</a></li>
+                                <li><a href="#">Pendants</a></li>
+                                <li><a href="#">Rings</a></li>
+                                <li><a href="#">Top rings & anklets</a></li>
+                                <li><a href="#">Necklace</a></li>
+                                <li><a href="#">Mangalsutras</a></li>
+                                
+                              </ul>
+                            </div>
+                            <div class="menu-column">
+                              <h4>Bags, Wallets & Clutches</h4>
+                              <ul>
+                                <li><a href="#">Handbags</a></li>
+                                <li><a href="#">Backpacks</a></li>
+                                <li><a href="#">Clutches</a></li>
+                                <li><a href="#">Messenger Bags</a></li>
+                                <li><a href="#">Wallets</a></li>
+                              </ul>
+                            </div>
+                            <div class="menu-column">
+                                <h4>Accessories</h4>
+                                <ul>
+                                  <li><a href="#">Watches For Him</a></li>
+                                  <li><a href="#">Watches For Her</a></li>
+                                  <li><a href="#">Sunglasses</a></li>
+                                  <li><a href="#">Belts</a></li>
+                                  <li><a href="#">Ties & Cufflinks</a></li>
+                                  <li><a href="#">Socks</a></li>
+                                 
+                                </ul>
+                              </div>
+                          </div>
+                         
+                      </div>
+                        </div>
+
+
+                        <div class="dropdown">
+                            <a href="#">Beauty</a>
+                            <div class="dropdown-content">
+                              <div class="mega-menu">
+                                <div class="menu-column">
+                                  <h4>Fragrance Store</h4>
+                                  <ul>
+                                    <li><a href="#">Perfumes</a></li>
+                                    <li><a href="#">Gift Sets</a></li>
+                                    <li><a href="#">Deodrants & Anti-Perspirants</a></li>
+                                    <li><a href="#">Body Mists</a></li>
+                                   
+                                  </ul>
+                                </div>
+                                <div class="menu-column">
+                                  <h4>Makeup</h4>
+                                  <ul>
+                                    <li><a href="#">Cleansers</a></li>
+                                    <li><a href="#">Moisturizers</a></li>
+                                    <li><a href="#">Facial Kits</a></li>
+                                    <li><a href="#">Eye Creams</a></li>
+                                    <li><a href="#">Men's Skincare</a></li>
+                                    <li><a href="#">Derma Sunscreen</a></li>
+                                    <li><a href="#">K-Skincares</a></li>
+                                    
+                                  </ul>
+                                </div>
+                                <div class="menu-column">
+                                  <h4>Hair</h4>
+                                  <ul>
+                                    <li><a href="#">Shampoos</a></li>
+                                    <li><a href="#">Hair Stylers</a></li>
+                                    <li><a href="#">Hair Oils</a></li>
+                                    <li><a href="#">Hair Masks</a></li>
+                                    <li><a href="#">Professional Products</a></li>
+                                  </ul>
+                                </div>
+                                <div class="menu-column">
+                                    <h4>Men's Grooming</h4>
+                                    <ul>
+                                      <li><a href="#">Shaving Creams</a></li>
+                                      <li><a href="#">FaceWash</a></li>
+                                      <li><a href="#">Facial Packs</a></li>
+                                      <li><a href="#">Hair Removal Products</a></li>
+                                     
+                                    </ul>
+                                  </div>
+                              </div>
+             
+                          </div>
+                            </div>
+    
+
+                            <div class="dropdown">
+                                <a href="#">Health & Wellness</a>
+                                <div class="dropdown-content">
+                                  <div class="mega-menu">
+                                    <div class="menu-column">
+                                      <h4>Fitness Equipment</h4>
+                                      <ul>
+                                        <li><a href="#">Dumbbells</a></li>
+                                        <li><a href="#">Treadmills</a></li>
+                                        <li><a href="#">Home Gym Items</a></li>
+                                        <li><a href="#">Exercise Bike</a></li>
+                                       
+                                      </ul>
+                                    </div>
+                                    <div class="menu-column">
+                                      <h4>Health Care & Devices</h4>
+                                      <ul>
+                                        <li><a href="#">BP Monitors</a></li>
+                                        <li><a href="#">BG Monitors</a></li>
+                                        <li><a href="#">Oximeters</a></li>
+                                        <li><a href="#">Weighing Machines</a></li>
+                                        <li><a href="#"> Thermometers</a></li>
+                                        
+                                      </ul>
+                                    </div>
+                                    <div class="menu-column">
+                                      <h4>Sports</h4>
+                                      <ul>
+                                        <li><a href="#">Badmintons</a></li>
+                                        <li><a href="#">Cricket Bat</a></li>
+                                        <li><a href="#">Carrom Board</a></li>
+                                        <li><a href="#">Chess</a></li>
+                                        <li><a href="#">Legos</a></li>
+                                      </ul>
+                                    </div>
+                                  
+                                  </div>
+                                 
+                              </div>
+                                </div>
+
+</div></div><hr>
+
+    <!-- banner -->
+    <div id="main">
+    <!-- images for slideshow -->
+    <div class="slideshow-container">
+     
+        <img class="mySlides" src="https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/company/5842/applications/6523fa5f41f4eb4c10a1d869/theme/pictures/free/resize-w:1180/theme-image-1735822409529.jpeg">
+        <img class="mySlides" src="https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/company/5842/applications/6523fa5f41f4eb4c10a1d869/theme/pictures/free/resize-w:1180/theme-image-1735813489967.jpeg">
+
+    <!-- buttons for prev and next  -->
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        
+        <!-- smalls dots in the image which shows image no. -->
+        <div class="indicator">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+    <div class="header">
+        <h1>Where Every Product Tells A Story</h1>
+        <p></p>
+    </div>
+    <div class="categories-container">
+        <div class="categories">
+            <div class="category">
+                <img src="https://cdn1.iconfinder.com/data/icons/shop-equipment/64/63_clothing-rack-clothes-hanger-dress-256.png" alt="All">
+                
+            </div>
+            <div class="category">
+                <img src="https://cdn.pixabay.com/photo/2016/12/19/03/14/gadget-1917227_640.png" alt="Face">
+               
+            </div>
+            <div class="category">
+                <img src="https://www.mimsbuilders.com/images/residency/specifications/kichen.png" alt="Eyes">
+               
+            </div>
+            <div class="category">
+                <img src="https://cdn0.iconfinder.com/data/icons/miscellaneous-60-solid/128/makeover_makeup_cosmetic_woman_glamour_salon-512.png" alt="Lips">
+                
+            </div>
+            <div class="category">
+                <img src="https://images.vexels.com/media/users/3/157485/isolated/preview/85a3a1ef20648ab616a56e3fd0ff1a63-multi-layer-pearl-necklace-icon-by-vexels.png" alt="Nails">
+                
+            </div>
+            <div class="category">
+                <img src="https://cdn3.iconfinder.com/data/icons/worker-employment-job-benefits/241/employment-employee-worker-benefit-002-1024.png" alt="Makeup Remover">
+                
+            </div>
+        </div>
+    </div>
+
+<!-- cards -->
+<div class="card-slideshow-container">
+    <div class="card-slides">
+        <div class="card">
+            <img src="https://assets.tatacliq.com/medias/sys_master/images/63364019519518.png" alt="ethnic wear">
+            <h3>Ethnic Wear</h3>
+            <p>"Feeling like a Queen is my traditional wear"</p>
+        </div>
+        <div class="card">
+            <img src="https://assets.tatacliq.com/medias/sys_master/images/63394912698398.png" alt="thsirts and tops">
+            <h3>Tees</h3>
+            <p>"Just me and my tees"</p>
+        </div>
+        <div class="card">
+            <img src="https://assets.tatacliq.com/medias/sys_master/images/63364019781662.png" alt="dresses">
+            <h3>Dresses</h3>
+            <p>"A women in elegant dress is always a head turner"</p>
+        </div>
+        <div class="card">
+            <img src="https://assets.tatacliq.com/medias/sys_master/images/63364019847198.png" alt="lingerie">
+            <h3>Lingerie</h3>
+            <p>"I have enough lingerie -said no one ever"</p>
+        </div>
+        
+        <div class="card">
+            <img src="https://assets.tatacliq.com/medias/sys_master/images/63364019585054.png" alt="Card 6">
+            <h3>Winter Essential</h3>
+            <p>"Be chic and cozy this winter season with stylish outfits"</p>
+        </div>
+        <div class="card">
+            <img src="https://assets.tatacliq.com/medias/sys_master/images/63364019978270.png" alt="Card 5">
+            <h3>Men's Footwear</h3>
+            <p>"If life gives you lemon,sell it and buy shoes"</p>
+        </div>
+        <div class="card">
+            <img src="https://assets.tatacliq.com/medias/sys_master/images/63364019912734.png" alt="Card 6">
+            <h3>Women's Footwear</h3>
+            <p>"I make shoe contact before eye contact"</p>
+        </div>
+        <div class="card">
+            <img src="https://assets.tatacliq.com/medias/sys_master/images/63364020043806.png" alt="Card 6">
+            <h3>Home Decor</h3>
+            <p>"Let your decor tell your story"</p>
+        </div>
+        <div class="card">
+            <img src="https://assets.tatacliq.com/medias/sys_master/images/63364020109342.png" alt="Card 6">
+            <h3>Beauty</h3>
+            <p>"Beauty in every shade"</p>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/78/05/a7/7805a785df15dd2411bf173c6ce85f8e.jpg" alt="Card 6">
+            <h3>Jwellery</h3>
+            <p>"REMINDER- nothing says I love you like jwellery"</p>
+        </div>
+        <div class="card">
+            <img src="https://assets.tatacliq.com/medias/sys_master/images/63364019847198.png" alt="Card 4">
+            <h3>Inner Wear</h3>
+            <p>"Bundled Up"</p>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/236x/39/bc/35/39bc35c5944fdbfee19dc014765c6fe1.jpg" alt="Card 4">
+            <h3>Men's Wear</h3>
+            <p>"Let the attire do the talking"</p>
+        </div>
+        <!-- <div class="prev">&#10094;</div>
+        <div class="next">&#10095;</div> -->
+    </div>
+
+    <!-- Dots for navigation -->
+    <div class="dots-container"></div>
+
+    </div>
+</div>
+
+<!-- banner2 -->
+ <!-- <div class="banner2">
+<h2>Kid;s Wear</h2>
+ <div id="grid">
+    
+    <img src="https://i.pinimg.com/736x/1b/8e/df/1b8edfe987243e62db21598e280fe851.jpg" alt="">
+    <img src="https://i.pinimg.com/736x/59/79/60/59796092f8f61c4d1ce5e1cf4ca10153.jpg" alt="">
+    <img src="https://i.pinimg.com/236x/0b/28/31/0b283184d808230c145cda475e8f34c4.jpg" alt="">
+    <img src="https://i.pinimg.com/736x/fa/02/66/fa0266b86a4faccd1920e07905b77dff.jpg" alt="">
+    <img src="https://i.pinimg.com/736x/4d/e6/d4/4de6d4c9bd074b9253ff3ea564f1a9d7.jpg" alt="">
+    <img src="https://i.pinimg.com/736x/f0/13/6a/f0136a924af50624fcc71b6f10ad0576.jpg" alt="">
+ </div>
+</div> -->
+<div class="banner2">
+  <h2>Kid's Wear</h2>
+  <div id="grid">
+      <div class="kids-wear-card" onclick="navigateToKidsSection()">
+          <img src="https://i.pinimg.com/736x/1b/8e/df/1b8edfe987243e62db21598e280fe851.jpg" alt="">
+          <span class="show-more">Show More</span>
+      </div>
+      <!-- <div class="kids-wear-card" onclick="navigateToKidsSection()">
+          <img src="https://i.pinimg.com/736x/59/79/60/59796092f8f61c4d1ce5e1cf4ca10153.jpg" alt="">
+          <span class="show-more">Show More</span>
+      </div> -->
+      <!-- <div class="kids-wear-card" onclick="navigateToKidsSection()">
+          <img src="https://i.pinimg.com/236x/0b/28/31/0b283184d808230c145cda475e8f34c4.jpg" alt="">
+          <span class="show-more">Show More</span>
+      </div> -->
+      <div class="kids-wear-card" onclick="navigateToKidsSection()">
+          <img src="https://i.pinimg.com/736x/fa/02/66/fa0266b86a4faccd1920e07905b77dff.jpg" alt="">
+          <span class="show-more">Show More</span>
+      </div>
+      <div class="kids-wear-card" onclick="navigateToKidsSection()">
+          <img src="https://i.pinimg.com/736x/4d/e6/d4/4de6d4c9bd074b9253ff3ea564f1a9d7.jpg" alt="">
+          <span class="show-more">Show More</span>
+      </div>
+      <!-- <div class="kids-wear-card" onclick="navigateToKidsSection()">
+          <img src="https://i.pinimg.com/736x/f0/13/6a/f0136a924af50624fcc71b6f10ad0576.jpg" alt="">
+          <span class="show-more">Show More</span>
+      </div> -->
+  </div>
+</div>
+
+<!-- banner3 -->
+ <!-- <div class="banner3">
+    <h2>Jwellery</h2>
+    <div class="jwell">
+        <img src="https://i.pinimg.com/736x/da/97/4a/da974ae9e7405d91b26b809e6c480597.jpg" alt="">
+        <img src="https://i.pinimg.com/474x/04/80/43/0480433e08036a734f20ab7c9a102b61.jpg" alt="">
+        <img src="https://i.pinimg.com/736x/c7/f6/6a/c7f66a5580bcce422e7fc9e38b07eca1.jpg" alt="">
+    </div>
+ </div> 
+ -->
+
+
+ <!-- card 4 -->
+  
+
+
+</div>
+<div>
+<h2>Shop By Category</h2>
+  <div class="container">
+    <div class="box">
+      <img src="https://i.pinimg.com/736x/5e/a7/1e/5ea71eb662397f1dd0a21b70b984a359.jpg">
+      <span>Furntiure</span>
+    </div>
+    <div class="box">
+      <img src="https://i.pinimg.com/736x/61/30/e8/6130e8eb931abd81bda3a425b1d1b75d.jpg">
+      <span>Technology</span>
+    </div>
+    <div class="box">
+      <img src="https://i.pinimg.com/736x/11/01/60/110160da949eddba8b53915a6ea940da.jpg">
+      <span>Skincare</span>
+    </div>
+    <div class="box">
+      <img src="https://i.pinimg.com/736x/01/64/13/016413ac7dd904e2ccc731e140fde007.jpg">
+      <span>Health and Wellness</span>
+    </div>
+  </div>
+</div>
+<script src="./scripts/home.js"></script>
+</body>
+</html>
